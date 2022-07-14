@@ -1,5 +1,8 @@
-# Base PHP MVC
-Repository for create a MVC project with PHP. This repository does not have a router.
+# The Pinia Team
+git remote add origin https://github.com/PazManrique/Support-App.git
+git branch -M main
+git push -u origin main
+This repository does not have a router.
 
 ## Installation
 
