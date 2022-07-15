@@ -1,7 +1,24 @@
+<?php $title="Inicio" ?>
+<!DOCTYPE html>
+<html lang="en">
 
 <?php include("./src/Views/layouts/head.php"); ?>
 
-<h1> Esto funciona Marta </h1>
+<body>
+
+<?php include("./src/Views/layouts/header.php"); ?>
+
+<?php include("./src/Views/layouts/footer.php"); ?>
+</body>
+</html>
+
+
+
+
+
+
+
+
 
 
 
