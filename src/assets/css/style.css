@@ -1,9 +1,3 @@
-footer{
-  /*   background: #31E38E; */
- /*    background-color: black; */
-    display: flex;
-    justify-content: center;
-}
-.bi-c-circle-fill{
-    width: 200%;
+body{
+    background-color: yellow;
 }
