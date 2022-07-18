@@ -1,47 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Grandstander:ital,wght@0,100;0,200;0,300;0,400;0,800;1,100;1,200;1,300;1,400;1,800&family=Inter:wght@100;200&display=swap');
+@import url("../css/header.css");
+@import url("../css/button.css");
+@import url("../css/footer.css");
 body{
     background-image: url('../images/Fondo_pinia.png');
     margin: 2%;
 }
-header{
-    border: solid 1px black;
-    border-radius: 10px;
-    background: white;
-}
-.header{
-    display: flex;
-    width: 95%;
-}
-.logo img{
-    width: 30%;
-    margin: 1%;
-}
-.text-titulo{
-    font-family: 'Grandstander';
-    font-style: normal;
-    margin-top: 3%;
-    -webkit-text-stroke: 2px black;
-    font-weight: 500;
-    font-size: 70px;
-    line-height: 84px;
-    text-align: center;
-    color: #31E38E;
-}
 
-footer{
-    width: 100%;
-    border: solid 1px black;
-    background: #31E38E;
-    border-radius: 10px;
-}
-.foot {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.foot img{
-    width: 25px;
-} 
-.foot h3{
-    margin: 1%;
-}
+
