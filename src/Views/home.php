@@ -5,6 +5,7 @@
 <?php include("./src/Views/layouts/head.php"); ?>
 
 <body>
+    <h2>Esto Funcina Pazzzzzzzzz</h2>
 
 <?php include("./src/Views/layouts/header.php"); ?>
 
