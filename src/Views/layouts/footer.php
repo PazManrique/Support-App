@@ -1,7 +1,8 @@
 <footer>
-    <div>
-    <i class="bi bi-c-circle-fill"></i>
-    <h3>@The Pinia Suppor</h3> 
+    <div class="foot">
+    <img src="src/assets/images/copy.svg" alt="">
+
+    <h3> @The Pinia Support</h3> 
     </div>
     
 </footer>
