@@ -1,3 +1,3 @@
 <footer>
-    <h1>Juliet</h1>
+    <h3>The Pinia Suppor</h3>
 </footer>
