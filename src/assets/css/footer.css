@@ -1,0 +1,17 @@
+footer{
+    width: 100%;
+    border: solid 1px black;
+    background: #31E38E;
+    border-radius: 10px;
+}
+.foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foot img{
+    width: 25px;
+} 
+.foot h3{
+    margin: 1%;
+}
