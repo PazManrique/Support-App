@@ -1,24 +1,51 @@
 .contenedor{
     position: relative;
 }
-.exito{
+.imgs{
     display: flex;
     justify-content: center;
     margin: 1%;
 }
 
-.exito img{
+.imgs img{
     width: 50%;
 }
 
-.sms-success{
+.sms{
     position: absolute;
     margin-top: 10%;
     margin-left: 45%;
 }
 
-.sms-success p{
+.sms p{
     font-family: 'Grandstander';
     text-align: center;
     font-size: 60px;
 } 
+
+/* Mensajes de error, campos obligatios */
+.sms-error{
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 50%;
+}
+
+.sms-error p{
+    font-family: 'Grandstander';
+    text-align: center;
+    font-size: 45px;
+} 
+
+/* Mensajes la solicitud se ha eliminado */
+
+.sms-edit{
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 50%;
+}
+
+.sms-edit p{
+    font-family: 'Grandstander';
+    text-align: center;
+    font-size: 45px;
+}

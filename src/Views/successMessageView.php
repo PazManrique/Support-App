@@ -1,11 +1,11 @@
 <div class="Contenedor">
-<div class="sms-success">
+<div class="sms">
 <p>Tu edición</p>
 <p>se logro con</p>
 <p>éxito</p>
 </div>
 
-<div class="exito">
+<div class="imgs">
     <img src="src/assets/images/imagen-exito.png" alt="">
 </div>
 </div>
