@@ -11,9 +11,10 @@
   <label for="description" class="form-label">Descripción de la consulta</label>
   <textarea class="form-control" id="description" rows="3"></textarea>
 </form>
-
+<br>
 <div class= "d-flex justify-content-around buttons">
   <button type="submit" class="btn btn-primary">Resetear</button>
   <button type="submit" class="btn btn-primary">Cancelar</button>
   <button type="submit" class="btn btn-primary">Guardar</button>
   </div>
+

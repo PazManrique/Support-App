@@ -1,3 +1,3 @@
 <footer>
-    <h3>The Pinia Suppor</h3>
+    <h3>The Pinia Support</h3>
 </footer>
