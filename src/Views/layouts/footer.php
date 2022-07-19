@@ -1,13 +1,9 @@
 
 <footer>
-    <h1>Juliet</h1>
+    <div class="foot">
+    <img src="src/assets/images/copy.svg" alt="">
+
+    <h3> @The Pinia Support</h3> 
+    </div>
+    
 </footer>
-
-
-    <footer>
-        <h2 id="pie_paguina"><i class="bi bi-c-circle-fill"></i>@ThePiniaSuppor</h2>
-    </footer>
-
-    <h3>The Pinia Suppor</h3>
-</footer>
-
