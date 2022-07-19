@@ -7,7 +7,6 @@
 
 <?php include("./src/Views/layouts/header.php"); ?>
 
-
 <div class="btn-home">
 <a href="?action=newRequestView"><button type="button" class="btn btn-primary ">Nueva Solicitud</button></a>
 </div>
