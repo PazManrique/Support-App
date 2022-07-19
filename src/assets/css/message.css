@@ -1,0 +1,24 @@
+.contenedor{
+    position: relative;
+}
+.exito{
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+}
+
+.exito img{
+    width: 50%;
+}
+
+.sms-success{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 45%;
+}
+
+.sms-success p{
+    font-family: 'Grandstander';
+    text-align: center;
+    font-size: 60px;
+} 
