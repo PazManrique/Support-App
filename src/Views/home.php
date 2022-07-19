@@ -7,7 +7,9 @@
 <div class="btn-home">
 <button type="button" class="btn btn-primary ">Nueva Solicitud</button>
 </div>
+<a href="$this -> newRequestView()">Nueva solicitud</a>
 <img src="" alt="">
+
 <?php include("./src/Views/layouts/footer.php"); ?>
 </body>
 </html>
