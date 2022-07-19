@@ -9,15 +9,19 @@ class Controller {
     public function __construct()
     {
        
-if(isset($_GET["action"])&&$_GET["action"]==="newRequestView"){
-    $this->newRequestView();
+if(isset($_GET["action"]) && $_GET["action"==="newRequestView"]){
+    $this -> newRequestView();
     return;
 }
 
 
         $this->index();
     }
-
+    public function newRequestView()
+   
+    {
+        return new View("newRequestView");
+    }
     public function index()
     {
         /* $data = [
@@ -27,11 +31,7 @@ if(isset($_GET["action"])&&$_GET["action"]==="newRequestView"){
         return new View('home');
     }
 
-    public function newRequestView()
-   
-    {
-        return new View('newRequestView');
-    }
+
 
  
 }
