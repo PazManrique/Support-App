@@ -17,6 +17,7 @@ public function __construct()
 {
     try{
     $this->mysql = $this->getConection();
+    var_dump($this->mysql);
     } catch(PDOException $ex){
     echo "esto es un error en db" . $ex->getMessage();
     die();
@@ -29,7 +30,7 @@ public function __construct()
 public function getConection()
 {
     $charset = "utf 8";
-    $options = [PDO::FETCH_DEFAULT => PDO::FETCH_ASSOC];
+    $options = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
     $dns = "mysql:host={$this->localhost};dbname={$this->db_name};$charset";
     $pdo = new PDO($dns,$this->username,$this->password,$options);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
