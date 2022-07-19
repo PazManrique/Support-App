@@ -9,7 +9,7 @@
 
 
 <div class="btn-home">
-<button type="button" class="btn btn-primary">Nueva Solicitud</button>
+<a href="?action=newRequestView"><button type="button" class="btn btn-primary ">Nueva Solicitud</button></a>
 </div>
 
 <?php include("./src/Views/layouts/footer.php"); ?>
