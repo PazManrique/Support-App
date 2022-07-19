@@ -16,7 +16,7 @@
 <br>
 <div class= "d-flex justify-content-around buttons">
   <button type="submit" class="btn btn-primary">Resetear</button>
-  <button type="submit" class="btn btn-primary">Cancelar</button>
+  <a href="?action=home"><button type="submit" class="btn btn-primary">Cancelar</button></a>
   <button type="submit" class="btn btn-primary">Guardar</button>
   </div>
 

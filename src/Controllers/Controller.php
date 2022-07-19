@@ -13,9 +13,10 @@ if(isset($_GET["action"]) && $_GET["action"]==="newRequestView"){
     $this -> newRequestView();
     return;
 }
+$this->index();
 
-
-        $this->index();
+if(isset($_GET["action"])&&$_GET["action"]==="home")        
+$this->index();
     }
    
     public function index()
