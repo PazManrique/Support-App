@@ -5,7 +5,12 @@ header{
 }
 .header{
     display: flex;
-    width: 95%;
+    width: 100%;
+    justify-content: flex-start;
+}
+.logo{
+    display: flex;
+    justify-content: left;
 }
 .logo img{
     width: 30%;
