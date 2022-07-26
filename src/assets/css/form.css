@@ -46,8 +46,8 @@ form {
   background-color: rgba(13, 202, 66, 1);
 }
 
-.btn-cancel:hover {
-  background: rgba(13, 202, 66, 1);
+.btn-save:hover {
+  background: rgb(10, 124, 42);
   border: solid 1px black;
   color: rgb(254, 254, 254);
   margin: 1%;
