@@ -1,8 +1,8 @@
 <div class="form">
-<form action="" method="post" class="form-contain">
+<form>
   <div class="mb-3">
     <label for="name" class="form-label">Nombre del solicitante</label>
-    <input type="text" class="form-control" id="name" name="name">
+    <input type="text" class="form-control" id="name">
   </div>
   <div class="mb-3">
     <label for="subject" class="form-label">Tema de la consulta</label>
