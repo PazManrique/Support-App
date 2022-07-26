@@ -13,10 +13,10 @@ class Controller {
 
     public function index()
     {
-        $data = [
-            "name" => "giacomo",
-        ];
+        // $data = [
+        //     "name" => "giacomo",
+        // ];
 
-        new View('home', $data);
+        new View('home', /* $data */);
     }
 }
