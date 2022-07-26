@@ -8,33 +8,15 @@ class Controller {
     
     public function __construct()
     {
-       
-if(isset($_GET["action"]) && $_GET["action"]==="newRequestView"){
-    $this -> newRequestView();
-    return;
-}
-$this->index();
-
-if(isset($_GET["action"])&&$_GET["action"]==="home")        
-$this->index();
+        $this->index();
     }
-   
+
     public function index()
     {
-        /* $data = [
+        $data = [
             "name" => "giacomo",
-        ]; */
+        ];
 
-        return new View('home');
+        new View('home', $data);
     }
-
-    public function newRequestView()
-   
-    {
-        return new View("newRequestView");
-    }
-
-
-
- 
 }

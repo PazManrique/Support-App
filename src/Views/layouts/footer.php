@@ -1,4 +1,3 @@
-
 <footer>
     <div class="foot">
     <img src="src/assets/images/copy.svg" alt="">
