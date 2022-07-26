@@ -40,3 +40,4 @@ public function getConection()
 
 
 }
+//intentar arreglar esto paz por dios
