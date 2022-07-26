@@ -11,13 +11,17 @@
   <div class="mb-3">
   <label for="description" class="form-label">Descripción de la consulta</label>
   <textarea class="form-control" id="description" rows="3"></textarea>
+  
+
 </form>
-</div>
-<br>
 <div class= "d-flex justify-content-around buttons">
-  <button type="submit" class="btn btn-primary">Resetear</button>
+<input type="reset" class="btn btn-primary" value="Restaurar">
+  <!-- <button type="reset" class="btn btn-primary">Resetear</button> -->
   <a href="?action=home"><button type="submit" class="btn btn-primary">Cancelar</button></a>
   <button type="submit" class="btn btn-primary">Guardar</button>
   </div>
+</div>
+<br>
+
 
   
