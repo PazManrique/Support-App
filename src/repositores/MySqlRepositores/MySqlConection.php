@@ -22,10 +22,6 @@ public function __construct()
     echo "esto es un error en db" . $ex->getMessage();
     die();
     }
-    
-//funcionara? si o no?
-
-    
 
 }
 public function getConection()
