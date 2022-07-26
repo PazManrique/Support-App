@@ -3,8 +3,9 @@
 namespace App\Controllers;
 
 use App\Core\View;
+use App\Models\User;
 
-class Controller {
+class UserController {
     
     public function __construct()
     {
@@ -21,11 +22,14 @@ $this->index();
    
     public function index()
     {
-        /* $data = [
-            "name" => "giacomo",
-        ]; */
+        $data = User::all();
+/* 
+        $marta = User::_getOne();
+         $data = [
+            $marta,
+        ];  */
 
-        return new View('home');
+        return new View('home', $data);
     }
 
     public function newRequestView()

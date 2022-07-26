@@ -10,7 +10,18 @@
 
 <img src="" alt="">
 
+
 <?php include("./src/Views/layouts/footer.php"); ?>
+
+
+<?php var_dump($data);
+ foreach ($data as $user){
+    echo "<li>{$user->getName()} / {$user->getCreateDate()}</li>";
+
+} 
+ 
+?>
+
 </body>
 </html>
 
