@@ -23,9 +23,6 @@ public function __construct()
     die();
     }
 
-
-    
-
 }
 public function getConection()
 {
