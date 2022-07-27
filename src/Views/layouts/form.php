@@ -5,8 +5,8 @@
     <input type="text" name = "name" class="form-control" id="name">
   </div>
   <div class="mb-3">
-    <label for="subject" class="form-label">Tema de la consulta</label>
-    <input type="text" class="form-control" id="subject">
+    <label for="topic" class="form-label">Tema de la consulta</label>
+    <input type="text" name="topic" class="form-control">
   </div>
   <div class="mb-3">
   <label for="description" class="form-label">Descripción de la consulta</label>

@@ -16,7 +16,7 @@
 
 <?php var_dump($data);
  foreach ($data as $user){
-    echo "<li>{$user->getName()} / {$user->getCreateDate()}</li>";
+    echo "<li>{$user->getName()} / {$user->getCreateDate()} / {$user->getCreateQueryTopic()}</li>";
 
 } 
  

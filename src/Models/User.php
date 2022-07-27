@@ -13,6 +13,7 @@ class User {
         private string $name,
         private ?int $id = 0,
         private ?string $date = "",
+        private ?string $topic = "",
 
     )
     {
@@ -29,10 +30,14 @@ class User {
     {
         return $this->date;
     }
-    static function getOne()
+    public function getCreateQueryTopic()
     {
-        return new self("Marta");
+        return $this->topic;
     }
+    // static function getOne()
+    // {
+    //     return new self("Marta");
+    // }
     static function getAll()
     {
         
@@ -46,7 +51,7 @@ class User {
         $userList = [];
 
         foreach ($userRow as $user) {
-            $obj = new self($user['name'],$user['id'],$user['date']);
+            $obj = new self($user['name'],$user['id'],$user['date'],$user['topic']);
             array_push($userList,$obj);
 
         }
@@ -57,7 +62,7 @@ class User {
     public function save() : void
     {
         try{
-            $sql = "INSERT INTO {$this->table} (name) VALUES ('{$this->getName()}')";
+            $sql = "INSERT INTO {$this->table} (name, topic) VALUES ('{$this->getName()}','{$this->getCreateQueryTopic()}')";
             $this->database->mysql->query($sql);
             } catch(PDOException $ex){
             echo "error" . $ex->getMessage();
