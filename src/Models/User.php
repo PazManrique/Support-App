@@ -12,6 +12,7 @@ class User {
     public function __construct(
         private string $name,
         private string $topic = "",
+        private string $description = "",
         private ?int $id = 0,
         private ?string $date = "",
         
@@ -30,6 +31,10 @@ class User {
     public function getTopic()
     {
         return $this->topic;
+    }
+    public function getDescription()
+    {
+        return $this->description;
     }
      public function getCreateDate()
     {
@@ -52,7 +57,7 @@ class User {
         $userList = [];
 
         foreach ($userRow as $user) {
-            $obj = new self($user['name'],$user['topic'],$user['id'],$user['date']);
+            $obj = new self($user['name'],$user['topic'],$user['description'],$user['id'],$user['date']);
             array_push($userList,$obj);
 
         }
@@ -63,7 +68,7 @@ class User {
     public function save() : void
     {
         try{
-            $sql = "INSERT INTO {$this->table} (name,topic) VALUES ('{$this->getName()}','{$this->getTopic()}')";
+            $sql = "INSERT INTO {$this->table} (name,topic,description) VALUES ('{$this->getName()}','{$this->getTopic()}','{$this->getDescription()}')";
             $this->database->mysql->query($sql);
             
             } catch(PDOException $ex){
