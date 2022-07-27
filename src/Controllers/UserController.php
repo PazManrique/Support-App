@@ -46,9 +46,11 @@ $this->index();
     public function store()
    
     {
-       $userName = $_POST['name'];
-       $user = new User($userName);
+       $userName = $_POST['name']; 
+       $userTopic = $_POST['topic'];
+       $user = new User($userName, $userTopic);
        $user->save();
+       
     }
 
 

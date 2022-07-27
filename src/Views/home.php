@@ -14,9 +14,9 @@
 <?php include("./src/Views/layouts/footer.php"); ?>
 
 
-<?php var_dump($data);
+<?php echo "<h1>OLEEEEEEEEEEEEEEEEEEEEEEEE PAZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ</h1>";
  foreach ($data as $user){
-    echo "<li>{$user->getName()} / {$user->getCreateDate()}</li>";
+    echo "<li>{$user->getName()} / {$user->getCreateDate()} / {$user->getTopic()}</li>";
 
 } 
  
