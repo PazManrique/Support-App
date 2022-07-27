@@ -6,7 +6,7 @@
   </div>
   <div class="mb-3">
     <label for="topic" class="form-label">Tema de la consulta</label>
-    <input type="text" name="topic" class="form-control">
+    <input type="text"  name ="topic" class="form-control" >
   </div>
   <div class="mb-3">
   <label for="description" class="form-label">Descripción de la consulta</label>

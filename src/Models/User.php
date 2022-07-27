@@ -11,9 +11,10 @@ class User {
     
     public function __construct(
         private string $name,
+        private string $topic = "",
         private ?int $id = 0,
         private ?string $date = "",
-        private ?string $topic = "",
+        
 
     )
     {
@@ -26,18 +27,18 @@ class User {
     {
         return $this->name;
     }
-    public function getCreateDate()
-    {
-        return $this->date;
-    }
-    public function getCreateQueryTopic()
+    public function getTopic()
     {
         return $this->topic;
     }
-    // static function getOne()
-    // {
-    //     return new self("Marta");
-    // }
+     public function getCreateDate()
+    {
+        return $this->date;
+    } 
+/*     static function getOne()
+    {
+        return new self("Marta");
+    } */
     static function getAll()
     {
         
@@ -51,7 +52,7 @@ class User {
         $userList = [];
 
         foreach ($userRow as $user) {
-            $obj = new self($user['name'],$user['id'],$user['date'],$user['topic']);
+            $obj = new self($user['name'],$user['topic'],$user['id'],$user['date']);
             array_push($userList,$obj);
 
         }
@@ -62,12 +63,14 @@ class User {
     public function save() : void
     {
         try{
-            $sql = "INSERT INTO {$this->table} (name, topic) VALUES ('{$this->getName()}','{$this->getCreateQueryTopic()}')";
+            $sql = "INSERT INTO {$this->table} (name,topic) VALUES ('{$this->getName()}','{$this->getTopic()}')";
             $this->database->mysql->query($sql);
+            
             } catch(PDOException $ex){
-            echo "error" . $ex->getMessage();
+            echo "Error" . $ex->getMessage();
             die();
             }
+            
 
 
      
