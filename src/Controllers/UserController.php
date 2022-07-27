@@ -50,7 +50,7 @@ $this->index();
        $userName = $_POST['name']; 
        $userTopic = $_POST['topic'];
        $userDescription = $_POST['description'];
-       $user = new User($userName, $userTopic, $userDescription);
+       $user = new User($userName, $userTopic,$userDescription);
        $user->save();
        
     }

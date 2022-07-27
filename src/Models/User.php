@@ -32,8 +32,8 @@ class User {
     {
         return $this->topic;
     }
-    public function getDescription() {
-        
+    public function getDescription()
+    {
         return $this->description;
     }
      public function getCreateDate()
@@ -57,7 +57,7 @@ class User {
         $userList = [];
 
         foreach ($userRow as $user) {
-            $obj = new self($user['name'],$user['topic'],$user['description'], $user['id'],$user['date']);
+            $obj = new self($user['name'],$user['topic'],$user['description'],$user['id'],$user['date']);
             array_push($userList,$obj);
 
         }
