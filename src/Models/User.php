@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Repositores\MySqlRepositores\MySqlConection;
+use PDOException;
 
 class User {
     private $database;
@@ -52,6 +53,19 @@ class User {
 
 
         return $userList;
+    }
+    public function save() : void
+    {
+        try{
+            $sql = "INSERT INTO {$this->table} (name) VALUES ('{$this->getName()}')";
+            $this->database->mysql->query($sql);
+            } catch(PDOException $ex){
+            echo "error" . $ex->getMessage();
+            die();
+            }
+
+
+     
     }
 
 }
