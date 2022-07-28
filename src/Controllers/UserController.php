@@ -10,23 +10,21 @@ class UserController {
     public function __construct()
     {
        
-if(isset($_GET["action"]) && $_GET["action"]==="newRequestView"){
+  if(isset($_GET["action"]) && $_GET["action"]==="newRequestView"){
     $this -> newRequestView();
     return;
-}
+} 
 
-if(isset($_GET["action"]) && $_GET["action"]==="editionView"){
-    $id = $_GET['id'];
-    $this -> editionView($id);
-return;
-}
 
 if(isset($_GET["action"]) && $_GET["action"]==="home"){
     $this -> home();
     return;
     
 }
-
+if(isset($_GET["action"]) && $_GET["action"]==="newRequestView"){
+    $this -> newRequestView();
+    return;
+} 
 if(isset($_GET["action"]) && $_GET["action"]==="store"){
     $this -> store();
     return;
@@ -42,11 +40,16 @@ if(isset($_GET["action"]) && $_GET["action"]==="delete"){
     $this->whatDoYouWantToDo($id);
     return;
 } 
+if(isset($_GET["action"]) && $_GET["action"]==="editionView"){
+    $id = $_GET['id'];
+    $this->editionView($id);
+    return;
+}  
 $this->index();
 
- 
+
 if(isset($_GET["action"])&&$_GET["action"]==="home")        
-$this->index();
+$this->index(); 
 
 
 
@@ -61,25 +64,29 @@ $this->index();
     }
 
 
-public function newRequestView()
+    public function newRequestView()
    
     {
         return new View("newRequestView");
-    }
-
+    } 
+    
+    // public function editionView(string $id) : View
+    // {
+    //     User::findById($id);
+    //     $data = [];
+    //     return new View ('editionView', $data);
+    // }
+      public function successMessageView() : View
+    {
+        return new View ('successMessageView');
+    } 
+ 
     public function editionView(int $id) : View
-   
     {
         $user = User::findById($id);
         $data = [$user];
-        return new View('editonView', $data);
-    }
-    
-public function successMessageView() : View
-    {
-        return new View ('successMessageView');
-    }
- 
+        return new View('editionView', $data);
+    }  
     public function home() : void
    
     {
@@ -94,7 +101,7 @@ public function successMessageView() : View
        $userDescription = $_POST['description'];
        $user = new User($userName, $userTopic,$userDescription);
        $user->save();
-      $this -> successMessageView();
+       $this -> successMessageView();  
        
     }
 
@@ -113,7 +120,10 @@ public function successMessageView() : View
         return new View('whatDoYouWantToDo', $data);
         
         
-    } 
+    }  
+ 
+
+
 
  
 }

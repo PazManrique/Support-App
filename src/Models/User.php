@@ -108,8 +108,8 @@ class User {
              $query = $database->mysql->query($sql);
              $userRow = $query->fetchAll();
 
-             $user = new self($userRow[0]['name'],$userRow[0]['topic'],$userRow[0]['description'],$userRow[0]['id'],$userRow[0]['date']);
-             
+             $user = new self($userRow[0]['name'], $userRow[0]['topic'], $userRow[0]['description'], $userRow[0]['id'], $userRow[0]['date']);
+           /*   $list = [$user]; */
              return $user;
 
             }catch(PDOException $ex){

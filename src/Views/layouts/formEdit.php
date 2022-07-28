@@ -2,16 +2,15 @@
 <form action="?action=store" method="post">
   <div class="mb-3">
     <label for="name" class="form-label">Nombre del solicitante</label>
-    <input type="text" name = "name" class="form-control" id="name" value="<?= $data[0]->getName()?>">
+    <input type="text" name = "name" class="form-control" <?= $data[0]->getName()?>>
   </div>
   <div class="mb-3">
     <label for="topic" class="form-label">Tema de la consulta</label>
-    <input type="text"  name ="topic" class="form-control" value="<?= $data[0]->getTopic()?>">
+    <input type="text"  name ="topic" class="form-control" <?= $data[0]->getTopic()?>>
   </div>
   <div class="mb-3">
   <label for="description" class="form-label">Descripción de la consulta</label>
-  <textarea class="form-control" name="description" rows="3"><?= $data[0]->getDescription()?></textarea>
-  </form>
+  <input class="form-control" name="description"  <?= $data[0]->getDescription()?>>
 
   <br>
 <div class= "d-flex justify-content-around buttons">

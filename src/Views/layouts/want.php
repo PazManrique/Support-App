@@ -19,7 +19,7 @@
  <label for="name" class="form-label">Nombre del solicitante</label>
     <p class="form-control"><?= $data[0]->getName()?></p>
   </div>
-<div class="mb-3">
+  <div class="mb-3">
     <label for="topic" class="form-label">Tema de la consulta</label>
     <p class="form-control"><?= $data[0]->getTopic()?></p>
   </div>
