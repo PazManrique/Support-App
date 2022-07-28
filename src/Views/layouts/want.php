@@ -17,14 +17,14 @@
 <form action="?action=store" method="post">
   <div class="mb-3">
  <label for="name" class="form-label">Nombre del solicitante</label>
-    <input type="text" name = "name" class="form-control" id="name" placeholder="name"  value="<?= $data[0]->getName(); var_dump($data)?>">
+    <p class="form-control"><?= $data[0]->getName()?></p>
   </div>
-  <!-- <div class="mb-3">
+  <div class="mb-3">
     <label for="topic" class="form-label">Tema de la consulta</label>
-    <input type="text"  name ="topic" class="form-control">
+    <p class="form-control"><?= $data[0]->getTopic()?></p>
   </div>
   <div class="mb-3">
   <label for="description" class="form-label">Descripción de la consulta</label>
-  <textarea class="form-control" name="description" rows="3"></textarea> -->
+  <p class="form-control"><?= $data[0]->getDescription()?></p>
   </form>
 </div>
