@@ -1,5 +1,5 @@
 <div class="form">
-<form action="?action=store" method="post">
+<form action="?action=update&&id=<?= $data[0]->getId()?>" method="post">
   <div class="mb-3">
     <label for="name" class="form-label">Nombre del solicitante</label>
     <input type="text" name = "name" class="form-control" value="<?= $data[0]->getName()?>">

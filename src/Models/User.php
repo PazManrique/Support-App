@@ -117,4 +117,18 @@ class User {
              die();
             }
      }
+     static function update(int $id, string $data, string $newtopic, string $newdescription) : void
+     {
+         try{
+             $sql = "UPDATE solicitud SET  name = '{$data}', topic = '{$newtopic}', description = '{$newdescription}'  
+             WHERE id = {$id}";
+             $database = new MySqlConection;
+             $database->mysql->query($sql);
+ 
+           
+             } catch(PDOException $ex){
+             echo "Error" . $ex->getMessage();
+             die();
+             }
+     } 
 }

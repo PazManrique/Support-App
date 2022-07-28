@@ -34,8 +34,12 @@ if(isset($_GET["action"]) && $_GET["action"]==="delete"){
    $this->destroy($id);
     return;
 }
-if(isset($_GET["action"]) && $_GET["action"]==="edit"){
+if(isset($_GET["action"]) && $_GET["action"]==="update"){
     $id = $_GET['id'];
+    $data = $_POST['name'];
+    $newtopic = $_POST['topic'];  
+    $newdescription = $_POST['description'];
+    $this->update($id, $data, $newtopic, $newdescription);
      return;
  }
  if(isset($_GET["action"]) && $_GET["action"]==="whatDoYouWantToDo"){
@@ -122,6 +126,12 @@ $this->index();
         
         
     }  
+    public function update(int $id, string $data, string $newtopic, string $newdescription) : void
+   
+    {
+        User::update($id,$data,$newtopic,$newdescription);
+        $this->index();
+    }
  
 
 
