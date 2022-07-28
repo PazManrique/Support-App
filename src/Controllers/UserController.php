@@ -14,6 +14,14 @@ if(isset($_GET["action"]) && $_GET["action"]==="newRequestView"){
     $this -> newRequestView();
     return;
 }
+if(isset($_GET["action"]) && $_GET["action"]==="whatDoYouWantToDo"){
+    $this -> whatDoYouWantToDo();
+    return;
+}
+if(isset($_GET["action"]) && $_GET["action"]==="editionView"){
+    $this -> editionView('name');
+    return;
+}
 if(isset($_GET["action"]) && $_GET["action"]==="store"){
     $this -> store();
     return;
@@ -44,6 +52,19 @@ $this->index();
         return new View("newRequestView");
     }
     
+    public function whatDoYouWantToDo() : View
+   
+    {
+        return new View("whatDoYouWantToDo");
+    }
+
+    public function editionView(string $id) : View
+    {
+        User::findById($id);
+        $data = [];
+        return new View ('editionView', $data);
+    }
+
     public function store()
    
     {

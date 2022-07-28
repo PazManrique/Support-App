@@ -65,6 +65,7 @@ class User {
 
         return $userList;
     }
+
     public function save() : void
     {
         try{
@@ -75,10 +76,23 @@ class User {
             echo "Error" . $ex->getMessage();
             die();
             }
-            
-
-
-     
     }
 
+    static function findById($id) : array
+    {
+        try {
+            $sql = "SELECT * FROM solicitud WHERE id = {$id}";
+            $database = new MySqlConection;
+            $query = $database->mysql->query($sql);
+            $userRow = $query->fetchAll();
+
+            $user = new self($userRow[0]['name']);
+            $list = [$user];
+            return $list;
+
+        }catch(PDOException $ex){
+            echo "Error" . $ex->getMessage();
+            die();
+            }
+    }
 }
