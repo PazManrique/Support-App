@@ -50,7 +50,7 @@ $this->index();
     }
 
 
-    public function newRequestView()
+    public function newRequestView(): View
    
     {
         return new View("newRequestView");
