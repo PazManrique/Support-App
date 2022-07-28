@@ -10,24 +10,23 @@ class UserController {
     public function __construct()
     {
        
-/*  if(isset($_GET["action"]) && $_GET["action"]==="newRequestView"){
+if(isset($_GET["action"]) && $_GET["action"]==="newRequestView"){
     $this -> newRequestView();
     return;
-} */
+}
 
-/*  if(isset($_GET["action"]) && $_GET["action"]==="editionView"){
-    $this -> editionView('name');
-    return;
-}  */
+if(isset($_GET["action"]) && $_GET["action"]==="editionView"){
+    $id = $_GET['id'];
+    $this -> editionView($id);
+return;
+}
+
 if(isset($_GET["action"]) && $_GET["action"]==="home"){
     $this -> home();
     return;
     
 }
-/* if(isset($_GET["action"]) && $_GET["action"]==="newRequestView"){
-    $this -> newRequestView();
-    return;
-} */
+
 if(isset($_GET["action"]) && $_GET["action"]==="store"){
     $this -> store();
     return;
@@ -37,10 +36,7 @@ if(isset($_GET["action"]) && $_GET["action"]==="delete"){
    $this->destroy($id);
     return;
 }
-if(isset($_GET["action"]) && $_GET["action"]==="edit"){
-    $id = $_GET['id'];
-     return;
- }
+
  if(isset($_GET["action"]) && $_GET["action"]==="whatDoYouWantToDo"){
     $id = $_GET['id'];
     $this->whatDoYouWantToDo($id);
@@ -48,9 +44,9 @@ if(isset($_GET["action"]) && $_GET["action"]==="edit"){
 } 
 $this->index();
 
-/* 
+ 
 if(isset($_GET["action"])&&$_GET["action"]==="home")        
-$this->index(); */
+$this->index();
 
 
 
@@ -65,28 +61,25 @@ $this->index(); */
     }
 
 
-/*      public function newRequestView()
+public function newRequestView()
    
     {
         return new View("newRequestView");
-    } */
+    }
+
+    public function editionView(int $id) : View
+   
+    {
+        $user = User::findById($id);
+        $data = [$user];
+        return new View('editonView', $data);
+    }
     
-    // public function editionView(string $id) : View
-    // {
-    //     User::findById($id);
-    //     $data = [];
-    //     return new View ('editionView', $data);
-    // }
- 
-/*     public function successMessageView() : View
+public function successMessageView() : View
     {
         return new View ('successMessageView');
-    } */
+    }
  
-/*     public function editionView() : View
-    {
-        return new View ('editionView');
-    }  */
     public function home() : void
    
     {
@@ -101,14 +94,16 @@ $this->index(); */
        $userDescription = $_POST['description'];
        $user = new User($userName, $userTopic,$userDescription);
        $user->save();
-      /*  $this -> successMessageView();  */
+      $this -> successMessageView();
        
     }
+
     public function destroy(int $id) : void
     {
        User::delete($id);
        $this->index(); 
     }
+
        public function whatDoYouWantToDo(int $id) : View
    
     {
@@ -118,9 +113,7 @@ $this->index(); */
         return new View('whatDoYouWantToDo', $data);
         
         
-    }  
-
-
+    } 
 
  
 }

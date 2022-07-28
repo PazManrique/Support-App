@@ -100,7 +100,7 @@ class User {
             }
     } 
 
-     static function findById($id) : array
+     static function findById($id) : object
      {
         try {
              $sql = "SELECT * FROM solicitud WHERE id = {$id}";
@@ -108,9 +108,9 @@ class User {
              $query = $database->mysql->query($sql);
              $userRow = $query->fetchAll();
 
-             $user = new self($userRow[0]['name']);
-             $list = [$user];
-             return $list;
+             $user = new self($userRow[0]['name'],$userRow[0]['topic'],$userRow[0]['description'],$userRow[0]['id'],$userRow[0]['date']);
+             
+             return $user;
 
             }catch(PDOException $ex){
             echo "Error" . $ex->getMessage();
