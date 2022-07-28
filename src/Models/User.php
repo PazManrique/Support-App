@@ -36,18 +36,23 @@ class User {
     {
         return $this->description;
     }
+    public function getId()
+    {
+        return $this->id;
+    }
      public function getCreateDate()
     {
         return $this->date;
     } 
+
 /*     static function getOne()
     {
         return new self("Marta");
     } */
-    static function getAll()
+/*     static function getAll()
     {
         
-    }
+    } */
     static function all() : array
     {
         $sql = "SELECT * FROM solicitud";
@@ -81,22 +86,35 @@ class User {
             die();
             }
     }
+    static function delete(int $id) : void
+    {
+        try{
+            $sql = "DELETE  FROM solicitud WHERE id = {$id}";
+            $database = new MySqlConection;
+            $database->mysql->query($sql);
 
-    // static function findById($id) : array
-    // {
-    //     try {
-    //         $sql = "SELECT * FROM solicitud WHERE id = {$id}";
-    //         $database = new MySqlConection;
-    //         $query = $database->mysql->query($sql);
-    //         $userRow = $query->fetchAll();
+          
+            } catch(PDOException $ex){
+            echo "Error" . $ex->getMessage();
+            die();
+            }
+    } 
 
-    //         $user = new self($userRow[0]['name']);
-    //         $list = [$user];
-    //         return $list;
+     static function findById($id) : array
+     {
+        try {
+             $sql = "SELECT * FROM solicitud WHERE id = {$id}";
+             $database = new MySqlConection;
+             $query = $database->mysql->query($sql);
+             $userRow = $query->fetchAll();
 
-    //     }catch(PDOException $ex){
-    //         echo "Error" . $ex->getMessage();
-    //         die();
-    //         }
-    // }
+             $user = new self($userRow[0]['name']);
+             $list = [$user];
+             return $list;
+
+            }catch(PDOException $ex){
+            echo "Error" . $ex->getMessage();
+             die();
+            }
+     }
 }
