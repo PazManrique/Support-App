@@ -12,10 +12,9 @@
 
 <?php
  foreach ($data as $user){
-    echo "<li id= '{$user->getId()}'>{$user->getName()} 
+    echo "<li id= '{$user->getId()}'> Date: {$user->getCreateDate()} / Topic: {$user->getTopic()}
     <a href='?action=whatDoYouWantToDo&&id={$user->getId()}'><button type='button' class='btn btn-primary'>Ver</button></a>
-    <a href='?action=delete&&id={$user->getId()}'>x</a>
-    <a href='?action=edit&&id={$user->getId()}'>edit</a></li>";
+    </li>";
 
 } 
  
