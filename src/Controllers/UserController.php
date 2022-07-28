@@ -5,128 +5,115 @@ namespace App\Controllers;
 use App\Core\View;
 use App\Models\User;
 
-class UserController {
-    
+class UserController
+{
+
     public function __construct()
     {
-       
-  if(isset($_GET["action"]) && $_GET["action"]==="newRequestView"){
-    $this -> newRequestView();
-    return;
-} 
+
+        if (isset($_GET["action"]) && $_GET["action"] === "newRequestView") {
+            $this->newRequestView();
+            return;
+        }
 
 
-if(isset($_GET["action"]) && $_GET["action"]==="home"){
-    $this -> home();
-    return;
-    
-}
-if(isset($_GET["action"]) && $_GET["action"]==="newRequestView"){
-    $this -> newRequestView();
-    return;
-} 
-if(isset($_GET["action"]) && $_GET["action"]==="store"){
-    $this -> store();
-    return;
-}
-if(isset($_GET["action"]) && $_GET["action"]==="delete"){
-   $id = $_GET['id'];
-   $this->destroy($id);
-    return;
-}
-if(isset($_GET["action"]) && $_GET["action"]==="update"){
-    $id = $_GET['id'];
-    $data = $_POST['name'];
-    $newtopic = $_POST['topic'];  
-    $newdescription = $_POST['description'];
-    $this->update($id, $data, $newtopic, $newdescription);
-     return;
- }
- if(isset($_GET["action"]) && $_GET["action"]==="whatDoYouWantToDo"){
-    $id = $_GET['id'];
-    $this->whatDoYouWantToDo($id);
-    return;
-} 
-if(isset($_GET["action"]) && $_GET["action"]==="editionView"){
-    $id = $_GET['id'];
-    $this->editionView($id);
-    return;
-}  
-$this->index();
+        if (isset($_GET["action"]) && $_GET["action"] === "home") {
+            $this->home();
+            return;
+        }
+        if (isset($_GET["action"]) && $_GET["action"] === "newRequestView") {
+            $this->newRequestView();
+            return;
+        }
+        if (isset($_GET["action"]) && $_GET["action"] === "store") {
+            $this->store();
+            return;
+        }
+        if (isset($_GET["action"]) && $_GET["action"] === "delete") {
+            $id = $_GET['id'];
+            $this->destroy($id);
+            return;
+        }
+        if (isset($_GET["action"]) && $_GET["action"] === "update") {
+            $id = $_GET['id'];
+            $data = $_POST['name'];
+            $newtopic = $_POST['topic'];
+            $newdescription = $_POST['description'];
+            $this->update($id, $data, $newtopic, $newdescription);
+            return;
+        }
+        if (isset($_GET["action"]) && $_GET["action"] === "whatDoYouWantToDo") {
+            $id = $_GET['id'];
+            $this->whatDoYouWantToDo($id);
+            return;
+        }
+        if (isset($_GET["action"]) && $_GET["action"] === "editionView") {
+            $id = $_GET['id'];
+            $this->editionView($id);
+            return;
+        }
+        $this->index();
 
 
-if(isset($_GET["action"])&&$_GET["action"]==="home")        
-$this->index(); 
-
-
-
-
+        if (isset($_GET["action"]) && $_GET["action"] === "home")
+            $this->index();
     }
-   
+
     public function index()
     {
         $data = User::all();
         return new View('home', $data);
-       
     }
     public function newRequestView()
-   
+
     {
         return new View("newRequestView");
-    } 
-    
-      public function successMessageView() : View
+    }
+
+    public function successMessageView(): View
     {
-        return new View ('successMessageView');
-    } 
- 
-    public function editionView(int $id) : View
+        return new View('successMessageView');
+    }
+
+    public function editionView(int $id): View
     {
         $user = User::findById($id);
         $data = [$user];
         return new View('editionView', $data);
-    }  
-    public function home() : void
-   
+    }
+    public function home(): void
+
     {
         $this->index();
     }
 
     public function store()
-   
+
     {
-       $userName = $_POST['name']; 
-       $userTopic = $_POST['topic'];
-       $userDescription = $_POST['description'];
-       $user = new User($userName, $userTopic,$userDescription);
-       $user->save();
-       $this -> successMessageView();  
-       
+        $userName = $_POST['name'];
+        $userTopic = $_POST['topic'];
+        $userDescription = $_POST['description'];
+        $user = new User($userName, $userTopic, $userDescription);
+        $user->save();
+        $this->successMessageView();
     }
-    public function destroy(int $id) : void
+    public function destroy(int $id): void
     {
-       User::delete($id);
-       $this->index(); 
+        User::delete($id);
+        $this->index();
     }
-       public function whatDoYouWantToDo(int $id) : View
-   
+    public function whatDoYouWantToDo(int $id): View
+
     {
-        
+
         $user = User::findById($id);
         $data = [$user];
         return new View('whatDoYouWantToDo', $data);
-        
-        
-    }  
-    public function update(int $id, string $data, string $newtopic, string $newdescription) : void
-   
+    }
+    public function update(int $id, string $data, string $newtopic, string $newdescription): void
+
     {
-        User::update($id,$data,$newtopic,$newdescription);
+        User::update($id, $data, $newtopic, $newdescription);
         $this->index();
     }
- 
-
-
-
- 
 }
