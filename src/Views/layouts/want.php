@@ -14,7 +14,7 @@
         <img>
     </div>
     <div class="form">
-<form action="?action=id" method="post">
+<form action="?action=store" method="post">
   <div class="mb-3">
  <label for="name" class="form-label">Nombre del solicitante</label>
     <p class="form-control"><?= $data[0]->getName()?></p>
