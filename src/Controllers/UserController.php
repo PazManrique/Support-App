@@ -69,20 +69,12 @@ $this->index();
         return new View('home', $data);
        
     }
-
-
     public function newRequestView()
    
     {
         return new View("newRequestView");
     } 
     
-    // public function editionView(string $id) : View
-    // {
-    //     User::findById($id);
-    //     $data = [];
-    //     return new View ('editionView', $data);
-    // }
       public function successMessageView() : View
     {
         return new View ('successMessageView');

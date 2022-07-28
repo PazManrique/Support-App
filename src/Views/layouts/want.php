@@ -2,18 +2,13 @@
 </div>
     <div>
     <?php
-    foreach ($data as $user){
-    echo "<a href='?action=editionView&&id={$user->getId()}'><button>Editar</button></a>";
-    
-    
-    
-
-    } 
- 
+    foreach ($data as $user){  
+    }  
 ?>
-        <!-- <a href="?action=editionView"><button>Editar</button></a> -->
+
+       <a href='?action=editionView&&id=<?=$user->getId()?>'><button>Editar</button></a>
         <a href="?action=Home"><button type="button" class="btn btn-primary ">Volver</button></a>
-        <button>Borrar</button>
+        <a href='?action=delete&&id=<?=$user->getId()?>'><button>Borrar</button></a>
     </div>
     <div>
     </div>
