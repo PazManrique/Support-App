@@ -26,4 +26,15 @@ class PiniaTeamTest extends TestCase
         $this->assertIsObject($view);
         $this->assertEquals('newRequestView', $view->getView());
     }
+
+    public function test_function_successMessageView_return_view_successMessageView()
+{
+    $controller = new UserController;
+    $view = $controller->successMessageView();
+
+    $this->assertIsObject($view);
+    $this->assertEquals('successMessageView', $view->getView());
+
+}
+
 }
