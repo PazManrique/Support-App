@@ -37,4 +37,20 @@ class PiniaTeamTest extends TestCase
 
 }
 
+public function test_function_editionView_return_view_editionView()
+{
+$controller = new UserController;
+$view = $controller->editionView();
+
+$this->assertIsObject($view);
+$this->assertEquals('editionView', $view->getView());
+
+
+}
+
+
+
+
+
+
 }
