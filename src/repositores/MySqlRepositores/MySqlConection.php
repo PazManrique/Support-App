@@ -17,7 +17,6 @@ public function __construct()
 {
     try{
     $this->mysql = $this->getConection();
-    var_dump($this->mysql);
     } catch(PDOException $ex){
     echo "esto es un error en db" . $ex->getMessage();
     die();
