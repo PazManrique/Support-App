@@ -5,24 +5,23 @@ namespace App\Models;
 use App\Repositores\MySqlRepositores\MySqlConection;
 use PDOException;
 
-class User {
+class User
+{
     private $database;
     private string $table = "solicitud";
-    
+
     public function __construct(
         private string $name,
         private string $topic = "",
         private string $description = "",
         private ?int $id = 0,
         private ?string $date = "",
-        
 
-    )
-    {
-        if(!$this->database){
+
+    ) {
+        if (!$this->database) {
             $this->database = new MySqlConection;
         }
-        
     }
     public function getName()
     {
@@ -40,20 +39,20 @@ class User {
     {
         return $this->id;
     }
-     public function getCreateDate()
+    public function getCreateDate()
     {
         return $this->date;
-    } 
+    }
 
-/*     static function getOne()
+    /*     static function getOne()
     {
         return new self("Marta");
     } */
-/*     static function getAll()
+    /*     static function getAll()
     {
         
     } */
-    static function all() : array
+    static function all(): array
     {
         $sql = "SELECT * FROM solicitud";
         $database = new MySqlConection;
@@ -62,59 +61,62 @@ class User {
         $userList = [];
 
         foreach ($userRow as $user) {
-            $obj = new self($user['name'],$user['topic'],$user['description'],$user['id'],$user['date']);
-            array_push($userList,$obj);
-
+            $obj = new self($user['name'], $user['topic'], $user['description'], $user['id'], $user['date']);
+            array_push($userList, $obj);
         }
 
 
         return $userList;
     }
 
-    public function save() : void
+    public function save(): void
     {
-        try{
+        try {
             $sql = "INSERT INTO {$this->table} (name,topic,description) VALUES ('{$this->getName()}','{$this->getTopic()}','{$this->getDescription()}')";
             $this->database->mysql->query($sql);
-            
-         
-           
-            
-            
-            } catch(PDOException $ex){
+        } catch (PDOException $ex) {
             echo "Error" . $ex->getMessage();
             die();
-            }
+        }
     }
-    static function delete(int $id) : void
+    static function delete(int $id): void
     {
-        try{
+        try {
             $sql = "DELETE  FROM solicitud WHERE id = {$id}";
             $database = new MySqlConection;
             $database->mysql->query($sql);
-
-          
-            } catch(PDOException $ex){
+        } catch (PDOException $ex) {
             echo "Error" . $ex->getMessage();
             die();
-            }
-    } 
+        }
+    }
 
-     static function findById($id) : object
-     {
+    static function findById($id): object
+    {
         try {
-             $sql = "SELECT * FROM solicitud WHERE id = {$id}";
-             $database = new MySqlConection;
-             $query = $database->mysql->query($sql);
-             $userRow = $query->fetchAll();
+            $sql = "SELECT * FROM solicitud WHERE id = {$id}";
+            $database = new MySqlConection;
+            $query = $database->mysql->query($sql);
+            $userRow = $query->fetchAll();
 
-             $user = new self($userRow[0]['name'], $userRow[0]['topic'], $userRow[0]['description'], $userRow[0]['id'], $userRow[0]['date']);
-           /*   $list = [$user]; */
-             return $user;
-
-            }catch(PDOException $ex){
+            $user = new self($userRow[0]['name'], $userRow[0]['topic'], $userRow[0]['description'], $userRow[0]['id'], $userRow[0]['date']);
+            /*   $list = [$user]; */
+            return $user;
+        } catch (PDOException $ex) {
             echo "Error" . $ex->getMessage();
-             die();
-            }
-     }
+            die();
+        }
+    }
+    static function update(int $id, string $data, string $newtopic, string $newdescription): void
+    {
+        try {
+            $sql = "UPDATE solicitud SET  name = '{$data}', topic = '{$newtopic}', description = '{$newdescription}'  
+             WHERE id = {$id}";
+            $database = new MySqlConection;
+            $database->mysql->query($sql);
+        } catch (PDOException $ex) {
+            echo "Error" . $ex->getMessage();
+            die();
+        }
+    }
 }
