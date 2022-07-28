@@ -1,7 +1,17 @@
 
 </div>
     <div>
-        <a href="?action=editionView&&id"><button>Editar</button></a>
+    <?php
+    foreach ($data as $user){
+    echo "<a href='?action=editionView&&id={$user->getId()}'><button>Editar</button></a>";
+    
+    
+    
+
+    } 
+ 
+?>
+        <!-- <a href="?action=editionView"><button>Editar</button></a> -->
         <a href="?action=Home"><button type="button" class="btn btn-primary ">Volver</button></a>
         <button>Borrar</button>
     </div>
