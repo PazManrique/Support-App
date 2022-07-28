@@ -9,6 +9,7 @@
 
 <h2>Modifica la Consulta</h2>
 <?php include("./src/Views/layouts/formEdit.php"); ?>
+
 <?php include("./src/Views/layouts/footer.php"); ?>
 </body>
 </html>

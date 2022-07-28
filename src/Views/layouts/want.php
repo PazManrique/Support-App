@@ -4,10 +4,11 @@
   foreach ($data as $user) {
   }
   ?>
-
-  <a href='?action=editionView&&id=<?= $user->getId() ?>'><button>Editar</button></a>
-  <a href="?action=Home"><button type="button" class="btn btn-primary ">Volver</button></a>
-  <a href='?action=delete&&id=<?= $user->getId() ?>'><button>Borrar</button></a>
+  <div class="d-flex justify-content-around buttons">
+  <a href='?action=editionView&&id=<?= $user->getId() ?>'><button class="btn btn-primary btn-edit">Editar</button></a>
+  <a href="?action=Home"><button type="button" class="btn btn-primary btn-back">Volver</button></a>
+  <a href='?action=delete&&id=<?= $user->getId() ?>'><button class="btn btn-primary btn-cancel" type="button">Borrar</button></a>
+</div>
 </div>
 <div>
 </div>

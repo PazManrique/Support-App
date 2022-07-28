@@ -15,11 +15,11 @@
 
   <br>
   <div class="d-flex justify-content-around buttons">
-    <button type="reset" class="btn btn-primary" value="reset">Resetear</button>
+    <button type="reset" class="btn btn-primary btn-reset" value="reset">Resetear</button>
     <div class="btn-home">
-      <a href="?action=home"><button type="button" class="btn btn-primary ">Cancelar</button></a>
+      <a href="?action=home"><button type="button" class="btn btn-primary btn-cancel">Cancelar</button></a>
     </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="submit" class="btn btn-primary btn-save">Guardar</button>
   </div>
 
 </div>
