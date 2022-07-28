@@ -78,21 +78,21 @@ class User {
             }
     }
 
-    static function findById($id) : array
-    {
-        try {
-            $sql = "SELECT * FROM solicitud WHERE id = {$id}";
-            $database = new MySqlConection;
-            $query = $database->mysql->query($sql);
-            $userRow = $query->fetchAll();
+    // static function findById($id) : array
+    // {
+    //     try {
+    //         $sql = "SELECT * FROM solicitud WHERE id = {$id}";
+    //         $database = new MySqlConection;
+    //         $query = $database->mysql->query($sql);
+    //         $userRow = $query->fetchAll();
 
-            $user = new self($userRow[0]['name']);
-            $list = [$user];
-            return $list;
+    //         $user = new self($userRow[0]['name']);
+    //         $list = [$user];
+    //         return $list;
 
-        }catch(PDOException $ex){
-            echo "Error" . $ex->getMessage();
-            die();
-            }
-    }
+    //     }catch(PDOException $ex){
+    //         echo "Error" . $ex->getMessage();
+    //         die();
+    //         }
+    // }
 }

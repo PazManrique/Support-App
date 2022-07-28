@@ -10,7 +10,7 @@
 
 <img src="" alt="">
 
-<?php echo "<h1>OLEEEEEEEEEEEEEEEEEEEEEEEE PAZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ</h1>";
+<?php
  foreach ($data as $user){
     echo "<li>{$user->getName()} / {$user->getCreateDate()} / {$user->getTopic()} / {$user->getDescription()}<a href='?action=whatDoYouWantToDo'><button type='button' class='btn btn-primary'>Ver</button></a></li>";
 

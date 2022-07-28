@@ -58,11 +58,16 @@ $this->index();
         return new View("whatDoYouWantToDo");
     }
 
-    public function editionView(string $id) : View
+    // public function editionView(string $id) : View
+    // {
+    //     User::findById($id);
+    //     $data = [];
+    //     return new View ('editionView', $data);
+    // }
+
+    public function editionView() : View
     {
-        User::findById($id);
-        $data = [];
-        return new View ('editionView', $data);
+        return new View ('editionView');
     }
 
     public function store()
