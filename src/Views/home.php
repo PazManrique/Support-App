@@ -12,7 +12,9 @@
 
 <?php
  foreach ($data as $user){
-    echo "<li>{$user->getName()} / {$user->getCreateDate()} / {$user->getTopic()} / {$user->getDescription()}<a href='?action=whatDoYouWantToDo'><button type='button' class='btn btn-primary'>Ver</button></a></li>";
+    echo "<li id= '{$user->getId()}'> Date: {$user->getCreateDate()} / Topic: {$user->getTopic()}
+    <a href='?action=whatDoYouWantToDo&&id={$user->getId()}'><button type='button' class='btn btn-primary'>Ver</button></a>
+    </li>";
 
 } 
  
