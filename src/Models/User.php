@@ -72,6 +72,10 @@ class User {
             $sql = "INSERT INTO {$this->table} (name,topic,description) VALUES ('{$this->getName()}','{$this->getTopic()}','{$this->getDescription()}')";
             $this->database->mysql->query($sql);
             
+         
+           
+            
+            
             } catch(PDOException $ex){
             echo "Error" . $ex->getMessage();
             die();

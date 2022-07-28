@@ -1,23 +1,23 @@
-.contenedor{
+.ContenedorSuccess{
     position: relative;
 }
-.imgs{
+.imgsSuccess{
     display: flex;
     justify-content: center;
     margin: 1%;
 }
 
-.imgs img{
+.imgsSuccess img{
     width: 50%;
 }
 
-.sms{
+.smsSuccess{
     position: absolute;
     margin-top: 10%;
     margin-left: 45%;
 }
 
-.sms p{
+.smsSuccess p{
     font-family: 'Grandstander';
     text-align: center;
     font-size: 60px;

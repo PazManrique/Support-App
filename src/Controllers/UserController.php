@@ -31,6 +31,10 @@ $this->index();
 
 if(isset($_GET["action"])&&$_GET["action"]==="home")        
 $this->index();
+
+
+
+
     }
    
     public function index()
@@ -65,6 +69,11 @@ $this->index();
     //     return new View ('editionView', $data);
     // }
 
+    public function successMessageView() : View
+    {
+        return new View ('successMessageView');
+    }
+
     public function editionView() : View
     {
         return new View ('editionView');
@@ -78,6 +87,7 @@ $this->index();
        $userDescription = $_POST['description'];
        $user = new User($userName, $userTopic,$userDescription);
        $user->save();
+       $this -> successMessageView();
        
     }
 

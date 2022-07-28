@@ -3,6 +3,7 @@
 @import url("../css/button.css");
 @import url("../css/footer.css");
 @import url("../css/form.css");
+@import url("../css/message.css");
 body{
     background-image: url('../images/Fondo_pinia2.png');
     margin: 2%;
