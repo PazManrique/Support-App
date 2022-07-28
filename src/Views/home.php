@@ -9,7 +9,9 @@
         <a href="?action=newRequestView"><button type="button" class="btn btn-primary ">Nueva Solicitud</button></a>
     </div>
 
-    <img src="" alt="">
+    
+   
+    
 
     <?php
     foreach ($data as $user) {
@@ -19,6 +21,8 @@
     }
 
     ?>
+
+    <h4>Si tu consulta es urgente por favor comunicate con Giaco Corso al email supergiaco@todo_es_sencillo.com</h4>
     <?php include("./src/Views/layouts/footer.php"); ?>
 
 </body>
