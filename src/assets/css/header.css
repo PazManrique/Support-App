@@ -1,0 +1,29 @@
+header{
+    border: solid 1px black;
+    border-radius: 10px;
+    background: white;
+}
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+.logo{
+    display: flex;
+    justify-content: left;
+}
+.logo img{
+    width: 30%;
+    margin: 1%;
+}
+.text-titulo{
+    font-family: 'Grandstander';
+    font-style: normal;
+    margin-top: 3%;
+    -webkit-text-stroke: 2px black;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 84px;
+    text-align: center;
+    color: #31E38E;
+}
