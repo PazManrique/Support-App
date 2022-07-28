@@ -37,7 +37,7 @@ $this->index();
 
     }
    
-    public function index()
+    public function index(): View
     {
         $data = User::all();
 /* 

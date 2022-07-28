@@ -13,9 +13,9 @@ class View {
         require_once("./src/Views/$view.php");
     }
 
-    public function getView()
+    public function getView():string
     {
-        return $this -> view;
+        return $this->view;
     }
 
 }
