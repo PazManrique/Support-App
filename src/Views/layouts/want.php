@@ -19,17 +19,17 @@
     <img>
   </div>
   <div class="form">
-    <form action="?action=store" method="post">
+    <form class="form-read" action="?action=store" method="post">
       <div class="mb-3">
-        <label for="name" class="form-label">Nombre del solicitante</label>
-        <p class="form-control"><?= $data[0]->getName() ?></p>
+        <label for="name" class="form-label">De:</label><span class="form-control form-want"><?= $data[0]->getName() ?></span>
       </div>
       <div class="mb-3">
-        <label for="topic" class="form-label">Tema de la consulta</label>
-        <p class="form-control"><?= $data[0]->getTopic() ?></p>
+        <label for="date" class="form-label">Realizada el:</label><span class="form-control form-want"><?= $data[0]->getCreateDate() ?></span>
       </div>
       <div class="mb-3">
-        <label for="description" class="form-label">Descripción de la consulta</label>
-        <p class="form-control"><?= $data[0]->getDescription() ?></p>
+        <label for="topic" class="form-label">Tema:</label><span class="form-control form-want"><?= $data[0]->getTopic() ?></span>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Consulta:</label><span class="form-control form-want"><?= $data[0]->getDescription() ?></span>
     </form>
   </div>

@@ -12,8 +12,8 @@
     <div class="list">
     <?php
     foreach ($data as $user) {
-        echo "<div class='list-info'><span id= '{$user->getId()}'>{$user->getCreateDate()}</span><span id= '{$user->getId()}'>{$user->getTopic()}</span>
-        <span id= '{$user->getId()}'><a href='?action=whatDoYouWantToDo&&id={$user->getId()}'><button type='button' class='btn btn-primary btn-see'>Ver</button></a>
+        echo "<div class='list-info'><span class='info' id= '{$user->getId()}'>{$user->getCreateDate()}</span><span class='info' id= '{$user->getId()}'>{$user->getTopic()}</span>
+        <span class='info' id= '{$user->getId()}'><a href='?action=whatDoYouWantToDo&&id={$user->getId()}'><button type='button' class='btn btn-primary btn-see'>Ver</button></a>
     </span></div><hr>";
     }
 
