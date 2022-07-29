@@ -59,7 +59,7 @@ class UserController
             $this->index();
     }
 
-    public function index()
+    public function index(): View
     {
         $data = User::all();
         return new View('home', $data);
