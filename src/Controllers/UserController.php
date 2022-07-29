@@ -58,13 +58,7 @@ class UserController
         if (isset($_GET["action"]) && $_GET["action"] === "home")
             $this->index();
     }
-<<<<<<< HEAD
-    
     public function index(): View
-=======
-
-    public function index()
->>>>>>> Nerea
     {
         $data = User::all();
         return new View('home', $data);
