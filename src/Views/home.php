@@ -6,23 +6,31 @@
 <body>
     <?php include("./src/Views/layouts/header.php"); ?>
     <div class="btn-home">
-        <a href="?action=newRequestView"><button type="button" class="btn btn-primary ">Nueva Solicitud</button></a>
+        <a href="?action=newRequestView"><button type="button" class="btn btn-primary btn-add">Nueva Solicitud</button></a>
     </div>
 
+<<<<<<< HEAD
     
    
     
 
+=======
+    <div class="list">
+>>>>>>> Nerea
     <?php
     foreach ($data as $user) {
-        echo "<li id= '{$user->getId()}'> Date: {$user->getCreateDate()} / Topic: {$user->getTopic()}
-    <a href='?action=whatDoYouWantToDo&&id={$user->getId()}'><button type='button' class='btn btn-primary'>Ver</button></a>
-    </li>";
+        echo "<div class='list-info'><span class='info' id= '{$user->getId()}'>{$user->getCreateDate()}</span><span class='info' id= '{$user->getId()}'>{$user->getTopic()}</span>
+        <span class='info' id= '{$user->getId()}'><a href='?action=whatDoYouWantToDo&&id={$user->getId()}'><button type='button' class='btn btn-primary btn-see'>Ver</button></a>
+    </span></div><hr>";
     }
 
     ?>
+<<<<<<< HEAD
 
     <h4>Si tu consulta es urgente por favor comunicate con Giaco Corso al email supergiaco@todo_es_sencillo.com</h4>
+=======
+    </div>
+>>>>>>> Nerea
     <?php include("./src/Views/layouts/footer.php"); ?>
 
 </body>

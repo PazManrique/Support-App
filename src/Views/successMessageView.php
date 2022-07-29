@@ -20,8 +20,8 @@
     <img src="src/assets/images/imagen-exito.png" alt="">
 </div>
 </div>
-<div class="mess-new-request">
-<a href="?action=home"><button type="button" class="btn-new-request">Volver a Solicitudes</button>
+<div class="d-flex justify-content-around buttons">
+<a href="?action=home"><button type="button" class="btn-new-request btn-back">Volver a Solicitudes</button>
 </div>
 
 

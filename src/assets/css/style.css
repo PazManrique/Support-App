@@ -4,6 +4,8 @@
 @import url("../css/footer.css");
 @import url("../css/form.css");
 @import url("../css/message.css");
+@import url("../css/list.css");
+
 body{
     background-image: url('../images/Fondo_pinia2.png');
     margin: 2%;
