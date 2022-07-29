@@ -58,7 +58,6 @@ class UserController
         if (isset($_GET["action"]) && $_GET["action"] === "home")
             $this->index();
     }
-    
     public function index(): View
     {
         $data = User::all();

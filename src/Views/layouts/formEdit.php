@@ -15,9 +15,9 @@
       <br>
       <div class="d-flex justify-content-around buttons">
         <div class="btn-home">
-          <a href="?action=home"><button type="button" class="btn btn-primary ">Cancelar</button></a>
+          <a href="?action=home"><button type="button" class="btn btn-primary btn-cancel">Cancelar</button></a>
         </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary btn-save">Guardar</button>
       </div>
 
     </div>
