@@ -3,9 +3,12 @@
 namespace Tests\Units;
 
 use App\Controllers\UserController;
+use phpDocumentor\Reflection\Types\Integer;
 use PHPUnit\Framework\TestCase;
 
-class PiniaTeamTest extends TestCase
+use function PHPSTORM_META\type;
+
+class UserControllerTest extends TestCase
 {
     public function test_function_index_return_view_home()
     {
@@ -36,5 +39,7 @@ class PiniaTeamTest extends TestCase
     $this->assertEquals('successMessageView', $view->getView());
 
 }
+
+
 
 }

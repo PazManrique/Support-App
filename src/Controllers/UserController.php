@@ -64,8 +64,10 @@ class UserController
         $data = User::all();
         return new View('home', $data);
     }
-    public function newRequestView()
 
+
+    public function newRequestView(): View
+   
     {
         return new View("newRequestView");
     }
