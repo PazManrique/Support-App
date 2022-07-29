@@ -17,6 +17,7 @@
 } 
  
 ?>
+<h3>Producto maximo viable</h3>
 <?php include("./src/Views/layouts/footer.php"); ?>
 
 </body>
