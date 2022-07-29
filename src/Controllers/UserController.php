@@ -116,6 +116,6 @@ class UserController
 
     {
         User::update($id, $data, $newtopic, $newdescription);
-        $this->index();
+        $this->successMessageView();
     }
 }

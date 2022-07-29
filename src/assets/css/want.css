@@ -1,0 +1,12 @@
+.want-info {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    margin: 1%;
+}
+
+.want {
+    display: flex;
+    justify-content: center;
+}

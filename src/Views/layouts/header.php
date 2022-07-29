@@ -1,7 +1,7 @@
 <header>
     <div class="header">
         <div class="logo">
-            <img src="src/assets/images/pinia_sin_fondo.png" alt="">
+            <img src="src/assets/images/pinia_sin_fondo.png" alt="The Pinia Support">
         </div>
         <h1 class="text-titulo">
             THE PINIA SUPPORT

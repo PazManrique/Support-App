@@ -6,8 +6,9 @@
    
 
 <?php include("./src/Views/layouts/header.php"); ?>
-
-<h2>¿Qué quieres hacer?</h2>
+    <div class="want-info">
+        <img class="want" src="src/assets/images/banner.png" alt="¿Qué quieres hacer">
+    </div>
 <?php include("./src/Views/layouts/want.php"); ?>
 <?php include("./src/Views/layouts/footer.php"); ?>
 </body>
