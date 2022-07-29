@@ -18,19 +18,18 @@
     }
 
     ?>
-<<<<<<< HEAD
  
-    <h4>Si tu consulta es urgente por favor comunicate con Giaco Corso al email supergiaco@todo_es_sencillo.com</h4>
-    </div>
-    <img src="src/assets/images/calavera-removebg-preview.png" alt="">
    
-=======
     </div>
+    <div class="calavera">
+    <img src="src/assets/images/calavera-removebg-preview.png" alt="Calavera">
+    </div>
+   
+    
 
     <div class="more-info">
     <h4>Si tu consulta es urgente por favor comunicate con Giaco Corso al email supergiaco@todo_es_sencillo.com</h4>
     </div>
->>>>>>> Nerea
     <?php include("./src/Views/layouts/footer.php"); ?>
 
 </body>
