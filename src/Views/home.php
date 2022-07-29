@@ -18,9 +18,11 @@
     }
 
     ?>
-
+ 
     <h4>Si tu consulta es urgente por favor comunicate con Giaco Corso al email supergiaco@todo_es_sencillo.com</h4>
     </div>
+    <img src="src/assets/images/calavera-removebg-preview.png" alt="">
+   
     <?php include("./src/Views/layouts/footer.php"); ?>
 
 </body>
