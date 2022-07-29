@@ -2,6 +2,9 @@
 
 namespace App;
 
-use App\Controllers\Controller;
+use App\Controllers\UserController;
+use App\Repositores\MySqlRepositores\MySqlConection;
 
-new Controller();
+new UserController;
+
+new MySqlConection;

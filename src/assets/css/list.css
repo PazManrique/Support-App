@@ -1,0 +1,27 @@
+.info {
+    text-align: center;
+    padding-right: 100px;
+    margin:1%;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap column;
+    width: 100%;
+    text-align: center;
+    margin-top:3%;
+}
+
+.list-info {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    background:blue;
+    height: 3px;
+    width: 50%;
+    margin: auto;
+}
+
